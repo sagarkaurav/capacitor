@@ -102,6 +102,10 @@
   [self.bridge releaseCallWithCallbackId:callbackId];
 }
 
+- (void)requestPermissions:(CAPPluginCall *)call {
+  
+}
+
 - (NSArray<CAPPluginCall *>*)getListeners:(NSString *)eventName {
   NSArray<CAPPluginCall *>* listeners = [self.eventListeners objectForKey:eventName];
   return listeners;

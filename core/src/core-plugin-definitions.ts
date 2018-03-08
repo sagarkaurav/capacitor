@@ -18,6 +18,7 @@ declare global {
     Motion?: MotionPlugin;
     Network?: NetworkPlugin;
     Photos?: PhotosPlugin;
+    PushNotifications?: PushNotificationsPlugin;
     Share?: SharePlugin;
     SplashScreen?: SplashScreenPlugin;
     StatusBar?: StatusBarPlugin;
@@ -1130,6 +1131,12 @@ export enum PhotosAlbumType {
    * Album is a user-created album
    */
   User = 'user'
+}
+
+//
+
+export interface PushNotificationsPlugin extends Plugin {
+  setup(options: any): Promise<void>;
 }
 
 //
